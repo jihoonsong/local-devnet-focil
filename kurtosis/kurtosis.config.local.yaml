@@ -14,6 +14,7 @@ network_params:
 snooper_enabled: true
 additional_services:
   - dora
+  - tx_spammer
 port_publisher:
   additional_services:
     enabled: true
