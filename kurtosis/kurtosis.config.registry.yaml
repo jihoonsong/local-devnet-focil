@@ -1,15 +1,16 @@
 participants:
   - el_type: geth
-    el_image: jihoonsg/geth-focil:1b47c09
+    el_image: jihoonsg/geth-focil:4ae0066
     cl_type: prysm
-    cl_image: jihoonsg/prysm-beacon-chain-focil:f1a658c
+    cl_image: jihoonsg/prysm-beacon-chain-focil:ec28ad1
     vc_type: prysm
-    vc_image: jihoonsg/prysm-validator-focil:f1a658c
+    vc_image: jihoonsg/prysm-validator-focil:ec28ad1
     count: 2
 network_params:
   genesis_delay: 20
   electra_fork_epoch: 1
   fulu_fork_epoch: 2
+  eip7805_fork_epoch: 3
   seconds_per_slot: 6
   num_validator_keys_per_node: 256
 snooper_enabled: true
