@@ -21,3 +21,5 @@ port_publisher:
   additional_services:
     enabled: true
     public_port_start: 65500
+dora_params:
+  image: jihoonsg/dora-focil:34db1a4
