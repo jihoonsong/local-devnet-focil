@@ -1,6 +1,6 @@
 participants:
   - el_type: geth
-    el_image: geth-focil:latest
+    el_image: jihoonsg/geth-focil:no-osaka
     cl_type: prysm
     cl_image: prysm-beacon-chain-focil:latest
     vc_type: prysm
@@ -8,10 +8,8 @@ participants:
     count: 2
 network_params:
   genesis_delay: 20
-  electra_fork_epoch: 1
-  fulu_fork_epoch: 2
-  eip7805_fork_epoch: 3
-  seconds_per_slot: 6
+  electra_fork_epoch: 0
+  eip7805_fork_epoch: 1
   num_validator_keys_per_node: 256
 snooper_enabled: true
 additional_services:
@@ -22,4 +20,6 @@ port_publisher:
     enabled: true
     public_port_start: 65500
 dora_params:
-  image: jihoonsg/dora-focil:34db1a4
+  image: jihoonsg/dora-focil:b6a120f
+ethereum_genesis_generator_params:
+  image: pk910/dev-images:genesis-generator-electra
