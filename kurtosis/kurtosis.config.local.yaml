@@ -19,7 +19,3 @@ port_publisher:
   additional_services:
     enabled: true
     public_port_start: 65500
-dora_params:
-  image: jihoonsg/dora-focil:b6a120f
-ethereum_genesis_generator_params:
-  image: pk910/dev-images:genesis-generator-electra

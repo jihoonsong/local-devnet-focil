@@ -5,7 +5,10 @@ participants:
     cl_image: jihoonsg/prysm-beacon-chain-focil:1c608df
     vc_type: prysm
     vc_image: jihoonsg/prysm-validator-focil:1c608df
-    count: 2
+  - el_type: geth
+    el_image: jihoonsg/geth-focil:no-osaka
+    cl_type: lodestar
+    cl_image: ethpandaops/lodestar:focil
 network_params:
   genesis_delay: 20
   electra_fork_epoch: 0

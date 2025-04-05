@@ -6,9 +6,17 @@ CONFIG_FILE := kurtosis.config
 run:
 	kurtosis run $(ETHEREUM_PACKAGE) --enclave $(ENCLAVE_NAME) --args-file ./$(CONFIG_FILE).local.yaml
 
+.PHONY: run-interop
+run-interop:
+	kurtosis run $(ETHEREUM_PACKAGE) --enclave $(ENCLAVE_NAME) --args-file ./$(CONFIG_FILE).local.interop.yaml
+
 .PHONY: run-registry
 run-registry:
 	kurtosis run $(ETHEREUM_PACKAGE) --enclave $(ENCLAVE_NAME) --args-file ./$(CONFIG_FILE).registry.yaml
+
+.PHONY: run-registry-interop
+run-registry-interop:
+	kurtosis run $(ETHEREUM_PACKAGE) --enclave $(ENCLAVE_NAME) --args-file ./$(CONFIG_FILE).registry.interop.yaml
 
 .PHONY: stop
 stop:
