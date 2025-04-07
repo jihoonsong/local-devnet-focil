@@ -13,6 +13,7 @@ network_params:
   genesis_delay: 20
   electra_fork_epoch: 0
   eip7805_fork_epoch: 1
+  seconds_per_slot: 6
   num_validator_keys_per_node: 256
 snooper_enabled: true
 additional_services:
