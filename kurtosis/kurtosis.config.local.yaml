@@ -1,6 +1,6 @@
 participants:
   - el_type: geth
-    el_image: jihoonsg/geth-focil:no-osaka
+    el_image: geth-focil:latest
     cl_type: prysm
     cl_image: prysm-beacon-chain-focil:latest
     vc_type: prysm
