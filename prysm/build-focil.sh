@@ -26,17 +26,17 @@ esac
 
 # Load the Docker images.
 echo "Loading Docker images from tarballs..."
-docker load -i bazel-bin/cmd/beacon-chain/oci_image_tarball/tarball.tar
-docker load -i bazel-bin/cmd/validator/oci_image_tarball/tarball.tar
+docker load -i "bazel-bin/cmd/beacon-chain/oci_image_tarball/tarball.tar"
+docker load -i "bazel-bin/cmd/validator/oci_image_tarball/tarball.tar"
 
 # Retag the Docker image.
 echo "Retagging Docker image..."
-docker image tag gcr.io/prysmaticlabs/prysm/beacon-chain:latest prysm-beacon-chain-focil:latest
-docker image tag gcr.io/prysmaticlabs/prysm/validator:latest prysm-validator-focil:latest
+docker image tag gcr.io/offchainlabs/prysm/beacon-chain:latest prysm-beacon-chain-focil:latest
+docker image tag gcr.io/offchainlabs/prysm/validator:latest prysm-validator-focil:latest
 
 # Remove the intermediate Docker images.
 echo "Removing the intermediate Docker images..."
-docker image rm gcr.io/prysmaticlabs/prysm/beacon-chain:latest
-docker image rm gcr.io/prysmaticlabs/prysm/validator:latest
+docker image rm gcr.io/offchainlabs/prysm/beacon-chain:latest
+docker image rm gcr.io/offchainlabs/prysm/validator:latest
 
 echo "Done!"
