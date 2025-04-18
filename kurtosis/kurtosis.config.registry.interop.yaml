@@ -19,7 +19,19 @@ snooper_enabled: true
 additional_services:
   - dora
   - tx_fuzz
+  - spamoor
 port_publisher:
   additional_services:
     enabled: true
     public_port_start: 65500
+spamoor_params:
+  spammers:
+    - scenario: eoatx
+      config:
+        throughput: 100
+    - scenario: uniswap-swaps
+      config:
+        throughput: 100
+    - scenario: blob-combined
+      config:
+        throughput: 5
