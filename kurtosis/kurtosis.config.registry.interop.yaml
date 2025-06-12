@@ -13,6 +13,10 @@ participants:
     el_image: jihoonsg/geth-focil:9f03028
     cl_type: teku
     cl_image: ethpandaops/teku:focil
+  - el_type: geth
+    el_image: jihoonsg/geth-focil:9f03028
+    cl_type: lighthouse
+    cl_image: jihoonsg/lighthouse-focil:92c22ed
 network_params:
   genesis_delay: 20
   electra_fork_epoch: 0

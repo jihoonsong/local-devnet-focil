@@ -13,6 +13,10 @@ participants:
     el_image: geth-focil:latest
     cl_type: teku
     cl_image: teku-focil:latest
+  - el_type: geth
+    el_image: geth-focil:latest
+    cl_type: lighthouse
+    cl_image: lighthouse-focil:latest
 network_params:
   genesis_delay: 20
   electra_fork_epoch: 0
