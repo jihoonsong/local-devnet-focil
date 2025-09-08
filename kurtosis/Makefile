@@ -18,6 +18,10 @@ run-registry:
 run-registry-interop:
 	kurtosis run $(ETHEREUM_PACKAGE) --enclave $(ENCLAVE_NAME) --args-file ./$(CONFIG_FILE).registry.interop.yaml --image-download always
 
+.PHONY: run-electra
+run-electra:
+	kurtosis run $(ETHEREUM_PACKAGE) --enclave $(ENCLAVE_NAME) --args-file ./$(CONFIG_FILE).electra.yaml --image-download always
+
 .PHONY: stop
 stop:
 	kurtosis enclave rm $(ENCLAVE_NAME) -f
