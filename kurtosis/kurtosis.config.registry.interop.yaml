@@ -17,17 +17,21 @@ participants:
     el_image: jihoonsg/geth-focil:dffb273
     cl_type: lighthouse
     cl_image: jihoonsg/lighthouse-focil:92c22ed
+    count: 2
 network_params:
   genesis_delay: 20
-  gloas_fork_epoch: 0
+  fulu_fork_epoch: 0
   eip7805_fork_epoch: 1
   seconds_per_slot: 6
+  perfect_peerdas_enabled: true
   num_validator_keys_per_node: 256
 snooper_enabled: true
 additional_services:
   - dora
   - tx_fuzz
   - spamoor
+dora_params:
+  image: ethpandaops/dora:eip7805-support-latest
 port_publisher:
   additional_services:
     enabled: true

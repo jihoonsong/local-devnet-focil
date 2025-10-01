@@ -19,9 +19,10 @@ participants:
     cl_image: lighthouse-focil:latest
 network_params:
   genesis_delay: 20
-  gloas_fork_epoch: 0
+  fulu_fork_epoch: 0
   eip7805_fork_epoch: 1
   seconds_per_slot: 6
+  perfect_peerdas_enabled: true
   num_validator_keys_per_node: 256
 snooper_enabled: true
 additional_services:
