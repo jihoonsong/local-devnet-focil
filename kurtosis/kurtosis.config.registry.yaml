@@ -1,15 +1,15 @@
 participants:
   - el_type: geth
-    el_image: jihoonsg/geth-focil:a5dd146
+    el_image: jihoonsg/geth-focil:9d17826
     cl_type: lodestar
-    cl_image: ethpandaops/lodestar:focil-eb033fd
-    count: 2
+    cl_image: ethpandaops/lodestar:focil-aed75aa
+    supernode: true
+    count: 4
 network_params:
   genesis_delay: 20
   fulu_fork_epoch: 0
   eip7805_fork_epoch: 1
   seconds_per_slot: 6
-  perfect_peerdas_enabled: true
   num_validator_keys_per_node: 256
 snooper_enabled: true
 additional_services:
