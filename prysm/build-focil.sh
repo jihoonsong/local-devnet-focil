@@ -2,6 +2,15 @@
 
 set -euo pipefail
 
+# On macOS, Bazel's hermetic CC toolchain is not supported so it falls back to a
+# local toolchain. The auto-detected C++ include path may not exist on newer
+# macOS versions where Apple moved headers into the SDK. Setting SDKROOT and
+# CPLUS_INCLUDE_PATH ensures Bazel can find the C++ standard library headers.
+if [[ "$(uname -s)" == "Darwin" ]]; then
+  export SDKROOT="${SDKROOT:-$(xcrun --show-sdk-path)}"
+  export CPLUS_INCLUDE_PATH="${CPLUS_INCLUDE_PATH:-${SDKROOT}/usr/include/c++/v1}"
+fi
+
 ARCH="$(uname -m)"
 
 # Function to clean extended attributes from a tarball and repack it.
