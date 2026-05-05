@@ -1,30 +1,23 @@
 participants_matrix:
   el:
-    - el_type: geth
-      el_image: geth-focil:latest
+    - el_type: besu
+      el_image: besu-focil:latest
+    - el_type: ethrex
+      el_image: ethrex-focil:latest
   cl:
-    - cl_type: prysm
-      cl_image: prysm-beacon-chain-focil:latest
-      vc_type: prysm
-      vc_image: prysm-validator-focil:latest
-      supernode: true
     - cl_type: lodestar
       cl_image: lodestar-focil:latest
-    - cl_type: teku
-      cl_image: teku-focil:latest
-    - cl_type: lighthouse
-      cl_image: lighthouse-focil:latest
+      supernode: true
 network_params:
-  genesis_delay: 20
-  fulu_fork_epoch: 0
+  gloas_fork_epoch: 0
   heze_fork_epoch: 1
-  seconds_per_slot: 6
-  num_validator_keys_per_node: 256
-snooper_enabled: true
+  preset: mainnet
 additional_services:
   - dora
   - tx_fuzz
   - spamoor
+dora_params:
+  image: bbusa/dora:focil
 port_publisher:
   additional_services:
     enabled: true

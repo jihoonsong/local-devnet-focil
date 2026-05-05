@@ -1,25 +1,20 @@
 participants:
-  - el_type: geth
-    el_image: geth-focil:latest
-    cl_type: prysm
-    cl_image: prysm-beacon-chain-focil:latest
-    vc_type: prysm
-    vc_image: prysm-validator-focil:latest
+  - el_type: besu
+    el_image: besu-focil:latest
+    cl_type: lodestar
+    cl_image: lodestar-focil:latest
     supernode: true
     count: 2
 network_params:
-  genesis_delay: 20
-  fulu_fork_epoch: 0
+  gloas_fork_epoch: 0
   heze_fork_epoch: 1
-  seconds_per_slot: 6
-  num_validator_keys_per_node: 256
-snooper_enabled: true
+  preset: mainnet
 additional_services:
   - dora
   - tx_fuzz
   - spamoor
 dora_params:
-  image: ethpandaops/dora:eip7805-support-latest
+  image: bbusa/dora:focil
 port_publisher:
   additional_services:
     enabled: true
