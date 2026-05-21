@@ -7,11 +7,15 @@ participants_matrix:
   cl:
     - cl_type: lodestar
       cl_image: ethpandaops/lodestar:focil
-      supernode: true
+    - cl_type: teku
+      cl_image: ethpandaops/teku:focil
+    - cl_type: lighthouse
+	    cl_image: ethpandaops/lighthouse:focil
 network_params:
-  gloas_fork_epoch: 0
-  heze_fork_epoch: 1
-  preset: mainnet
+  gloas_fork_epoch: 1
+  heze_fork_epoch: 2
+  num_validator_keys_per_node: 256
+  preset: minimal
 additional_services:
   - dora
   - tx_fuzz
