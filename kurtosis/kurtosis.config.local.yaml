@@ -13,8 +13,6 @@ additional_services:
   - dora
   - tx_fuzz
   - spamoor
-dora_params:
-  image: bbusa/dora:focil
 port_publisher:
   additional_services:
     enabled: true
