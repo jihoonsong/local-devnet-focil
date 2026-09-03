@@ -1,24 +1,22 @@
 participants_matrix:
   el:
-    - el_type: besu
-      el_image: ethpandaops/besu:focil
     - el_type: ethrex
-      el_image: ethpandaops/ethrex:focil
+      el_image: ethpandaops/ethrex:focil-devnet-0
+    - el_type: besu
+      el_image: ethpandaops/besu:focil-devnet-0
+    - el_type: nethermind
+      el_image: ethpandaops/nethermind:focil-devnet-0
   cl:
     - cl_type: lodestar
-      cl_image: ethpandaops/lodestar:focil
+      cl_image: ethpandaops/lodestar:focil-devnet-0
     - cl_type: teku
-      cl_image: ethpandaops/teku:focil
-    - cl_type: lighthouse
-	    cl_image: ethpandaops/lighthouse:focil
+      cl_image: ethpandaops/teku:focil-devnet-0
 network_params:
-  gloas_fork_epoch: 1
-  heze_fork_epoch: 2
-  num_validator_keys_per_node: 256
-  preset: minimal
+  preset: mainnet
+  gloas_fork_epoch: 0
+  heze_fork_epoch: 1
 additional_services:
   - dora
-  - tx_fuzz
   - spamoor
 port_publisher:
   additional_services:
@@ -35,3 +33,4 @@ spamoor_params:
     - scenario: blob-combined
       config:
         throughput: 5
+global_log_level: debug
