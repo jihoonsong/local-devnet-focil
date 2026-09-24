@@ -30,7 +30,7 @@ spamoor_params:
     - scenario: uniswap-swaps
       config:
         throughput: 100
-    # - scenario: blob-combined
-    #   config:
-    #     throughput: 5
+    - scenario: blob-combined
+      config:
+        throughput: 5
 global_log_level: debug
