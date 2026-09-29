@@ -6,6 +6,8 @@ participants_matrix:
       el_image: ethpandaops/besu:focil-devnet-0
     - el_type: nethermind
       el_image: ethpandaops/nethermind:focil-devnet-0
+    - el_type: reth
+      el_image: ethpandaops/reth:focil-devnet-0
   cl:
     - cl_type: lodestar
       cl_image: ethpandaops/lodestar:focil-devnet-0
